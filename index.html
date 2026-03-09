@@ -13,6 +13,12 @@
   </head>
   <body>
     <main class="component">
+      <section class="component__error-message error-message hide">
+        <h2 class="error-message__header">
+          Please select a rating before submitting!
+        </h2>
+        <button type="button" class="error-message__close-btn">Close</button>
+      </section>
       <section class="component__rating rating">
         <div class="rating__image-container">
           <img class="star-img" src="./assets/images/icon-star.svg" alt="" />
@@ -27,15 +33,15 @@
         <form class="rating__form" action="#" method="post">
           <div class="rating__form--inputs">
             <label class="rating__form--label" for="one">1</label>
-            <input type="radio" id="one" name="rating" />
+            <input type="radio" id="one" name="rating" value="1" />
             <label class="rating__form--label" for="two">2</label>
-            <input type="radio" id="two" name="rating" />
+            <input type="radio" id="two" name="rating" value="2" />
             <label class="rating__form--label" for="three">3</label>
-            <input type="radio" id="three" name="rating" />
+            <input type="radio" id="three" name="rating" value="3" />
             <label class="rating__form--label" for="four">4</label>
-            <input type="radio" id="four" name="rating" />
+            <input type="radio" id="four" name="rating" value="4" />
             <label class="rating__form--label" for="five">5</label>
-            <input type="radio" id="five" name="rating" />
+            <input type="radio" id="five" name="rating" value="5" />
           </div>
 
           <button type="submit" class="rating__submit-btn">Submit</button>
