@@ -32,7 +32,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translate(50%);
+  left: 50%;
+  transform: translateX(-50%);
 }
 .component__rating, .component__thank-you-state {
   width: 90%;
@@ -92,11 +93,11 @@ body {
      -moz-appearance: none;
           appearance: none;
 }
-.rating__form--inputs .selected {
+.rating__form--inputs input:checked + label {
   background-color: hsl(25, 97%, 53%);
   color: hsl(0, 100%, 100%);
 }
-.rating__form--inputs .selected:hover {
+.rating__form--inputs input:checked + label:hover {
   background-color: hsl(25, 97%, 53%);
   color: hsl(0, 100%, 100%);
 }
