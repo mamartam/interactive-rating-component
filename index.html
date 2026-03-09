@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="icon"
-      type="images/x-icon"
+      type="image/x-icon"
       href="./assets/images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="./dist/css/main.css" />
@@ -21,7 +21,12 @@
       </section>
       <section class="component__rating rating">
         <div class="rating__image-container">
-          <img class="star-img" src="./assets/images/icon-star.svg" alt="" />
+          <img
+            class="star-img"
+            src="./assets/images/icon-star.svg"
+            alt="Star icon"
+            aria-hidden="true"
+          />
         </div>
         <div class="rating__info-container">
           <h1 class="rating__header">How did we do?</h1>
@@ -32,22 +37,25 @@
         </div>
         <form class="rating__form" action="#" method="post">
           <div class="rating__form--inputs">
-            <label class="rating__form--label" for="one" data-id="one">1</label>
             <input type="radio" id="one" name="rating" value="1" />
-            <label class="rating__form--label" for="two" data-id="two">2</label>
+            <label class="rating__form--label" for="one" data-id="one">1</label>
+
             <input type="radio" id="two" name="rating" value="2" />
+            <label class="rating__form--label" for="two" data-id="two">2</label>
+
+            <input type="radio" id="three" name="rating" value="3" />
             <label class="rating__form--label" for="three" data-id="three"
               >3</label
             >
-            <input type="radio" id="three" name="rating" value="3" />
+            <input type="radio" id="four" name="rating" value="4" />
             <label class="rating__form--label" for="four" data-id="four"
               >4</label
             >
-            <input type="radio" id="four" name="rating" value="4" />
+
+            <input type="radio" id="five" name="rating" value="5" />
             <label class="rating__form--label" for="five" data-id="five"
               >5</label
             >
-            <input type="radio" id="five" name="rating" value="5" />
           </div>
 
           <button type="submit" class="rating__submit-btn">Submit</button>
@@ -57,7 +65,7 @@
         <img
           class="thank-you-state__image"
           src="./assets/images/illustration-thank-you.svg"
-          alt=""
+          alt="Illustration thank-you"
         />
         <div class="thank-you-state__user-rating-container">
           <p>You selected <span class="user-choice">0</span> out of 5</p>
