@@ -1,3 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+}
+
 body {
-  background-color: lightgrey;
+  font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.component__rating {
+  width: 90%;
+  max-width: 450px;
+  background-color: hsl(213, 19%, 18%);
+  padding: 1.5em;
+  border-radius: 1em;
+  margin: auto;
+}
+
+.rating__image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: rgba(149.328, 158.0082, 171.972, 0.1);
+  padding: 1em;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 1.5em;
+}
+.rating__header {
+  color: hsl(0, 100%, 100%);
+  font-size: 30px;
+  margin-bottom: 0.25em;
+}
+.rating__description {
+  color: hsl(217, 12%, 63%);
+  font-size: 15px;
+  line-height: 1.5em;
+  margin-bottom: 1.5em;
+}
+.rating__form--inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.rating__form--inputs input {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+.rating__form--label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: rgba(149.328, 158.0082, 171.972, 0.1);
+  color: hsl(217, 12%, 63%);
+  border-radius: 50%;
+  transition: background-color 0.3s linear, color 0.3s linear;
+}
+.rating__form--label:hover {
+  background-color: hsl(0, 100%, 100%);
+  cursor: pointer;
+  color: hsl(216, 12%, 8%);
+}
+.rating__submit-btn {
+  display: block;
+  width: 100%;
+  background-color: hsl(25, 97%, 53%);
+  padding: 1em;
+  border-radius: 2em;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  transition: background-color 0.3s linear;
+}
+.rating__submit-btn:hover {
+  background-color: hsl(0, 100%, 100%);
+  cursor: pointer;
 }/*# sourceMappingURL=main.css.map */
