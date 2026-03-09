@@ -1,8 +1,85 @@
 @import "./resets";
 @import "./variables";
-
 @import url("https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap");
 
 body {
   font-family: "Overpass", sans-serif;
+  min-height: 100vh;
+  background-color: $body-bg;
+  @include flexBox;
+  font-size: $font-size;
+}
+.component {
+  &__rating {
+    width: 90%;
+    max-width: 450px;
+    background-color: $component-bg;
+    padding: 1.5em;
+    border-radius: 1em;
+    margin: auto;
+  }
+}
+.rating {
+  &__image-container {
+    @include flexBox;
+    border-radius: 50%;
+    background-color: rgba($light-grey, 0.1);
+    padding: 1em;
+    width: fit-content;
+    margin-bottom: 1.5em;
+  }
+  &__header {
+    color: $header-text-color;
+    font-size: $font-size * 2;
+    margin-bottom: 0.25em;
+  }
+  &__description {
+    color: $light-grey;
+    font-size: $font-size;
+    line-height: 1.5em;
+    margin-bottom: 1.5em;
+  }
+  &__form {
+    &--inputs {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 2em;
+      input {
+        appearance: none;
+      }
+    }
+    &--label {
+      @include flexBox;
+      width: 50px;
+      height: 50px;
+      background-color: rgba($light-grey, 0.1);
+      color: $light-grey;
+      border-radius: 50%;
+      transition:
+        background-color 0.3s linear,
+        color 0.3s linear;
+      &:hover {
+        background-color: $header-text-color;
+        cursor: pointer;
+        color: $body-bg;
+      }
+    }
+  }
+  &__submit-btn {
+    display: block;
+    width: 100%;
+    background-color: $primary-orange;
+    padding: 1em;
+    border-radius: 2em;
+    text-transform: uppercase;
+    font-weight: map-get($font-weights, bold);
+    letter-spacing: 0.15em;
+    transition: background-color 0.3s linear;
+
+    &:hover {
+      background-color: $header-text-color;
+      cursor: pointer;
+    }
+  }
 }
