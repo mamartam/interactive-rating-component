@@ -22,9 +22,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transform: translate(50%);
   }
 
-  &__rating {
+  &__rating,
+  &__thank-you-state {
     width: 90%;
     max-width: 450px;
     background-color: $component-bg;
@@ -45,6 +47,10 @@ body {
     background-color: $primary-orange;
     padding: 0.5em;
     border-radius: 0.5em;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }
 .rating {
@@ -75,6 +81,14 @@ body {
       margin-bottom: 2em;
       input {
         appearance: none;
+      }
+      .selected {
+        background-color: $primary-orange;
+        color: $header-text-color;
+        &:hover {
+          background-color: $primary-orange;
+          color: $header-text-color;
+        }
       }
     }
     &--label {
@@ -109,6 +123,34 @@ body {
       background-color: $header-text-color;
       cursor: pointer;
     }
+  }
+}
+.thank-you-state {
+  &__image {
+    display: block;
+    margin: 1em auto 2em auto;
+  }
+  &__user-rating-container {
+    width: 100%;
+    @include flexBox;
+    p {
+      color: rgba($primary-orange, 0.7);
+      background-color: rgba($light-grey, 0.1);
+      padding: 0.5em 1em;
+      border-radius: 1em;
+    }
+    margin-bottom: 2em;
+  }
+  &__header {
+    color: $header-text-color;
+    text-align: center;
+    margin-bottom: 0.5em;
+  }
+  &__description {
+    color: $light-grey;
+    text-align: center;
+    margin-bottom: 1em;
+    line-height: 1.5em;
   }
 }
 
