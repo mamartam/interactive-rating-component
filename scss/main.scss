@@ -8,8 +8,22 @@ body {
   background-color: $body-bg;
   @include flexBox;
   font-size: $font-size;
+  position: relative;
 }
 .component {
+  &__error-message {
+    width: 200px;
+    position: absolute;
+    top: 1em;
+    padding: 1em;
+    color: $header-text-color;
+    background-color: $light-grey;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   &__rating {
     width: 90%;
     max-width: 450px;
@@ -17,6 +31,20 @@ body {
     padding: 1.5em;
     border-radius: 1em;
     margin: auto;
+  }
+}
+.error-message {
+  &__header {
+    text-align: center;
+    font-size: $font-size;
+    margin-bottom: 1em;
+  }
+  &__close-btn {
+    align-self: end;
+    color: $body-bg;
+    background-color: $primary-orange;
+    padding: 0.5em;
+    border-radius: 0.5em;
   }
 }
 .rating {
@@ -82,4 +110,8 @@ body {
       cursor: pointer;
     }
   }
+}
+
+.hide {
+  display: none;
 }
