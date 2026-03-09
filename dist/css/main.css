@@ -18,8 +18,21 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 15px;
+  position: relative;
 }
 
+.component__error-message {
+  width: 200px;
+  position: absolute;
+  top: 1em;
+  padding: 1em;
+  color: hsl(0, 100%, 100%);
+  background-color: hsl(217, 12%, 63%);
+  border-radius: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .component__rating {
   width: 90%;
   max-width: 450px;
@@ -27,6 +40,19 @@ body {
   padding: 1.5em;
   border-radius: 1em;
   margin: auto;
+}
+
+.error-message__header {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 1em;
+}
+.error-message__close-btn {
+  align-self: end;
+  color: hsl(216, 12%, 8%);
+  background-color: hsl(25, 97%, 53%);
+  padding: 0.5em;
+  border-radius: 0.5em;
 }
 
 .rating__image-container {
@@ -92,4 +118,8 @@ body {
 .rating__submit-btn:hover {
   background-color: hsl(0, 100%, 100%);
   cursor: pointer;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
