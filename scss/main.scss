@@ -22,7 +22,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    transform: translate(50%);
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   &__rating,
@@ -81,13 +82,13 @@ body {
       margin-bottom: 2em;
       input {
         appearance: none;
-      }
-      .selected {
-        background-color: $primary-orange;
-        color: $header-text-color;
-        &:hover {
+        &:checked + label {
           background-color: $primary-orange;
           color: $header-text-color;
+          &:hover {
+            background-color: $primary-orange;
+            color: $header-text-color;
+          }
         }
       }
     }
